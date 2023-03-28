@@ -73,6 +73,7 @@ class WeatherViewController: UIViewController {
     }
     
     func fetchWeatherData(city: String) {
+        self.showLoader()
         self.weatherViewModel.fetchWeatherData(city: city) { status, error in
             self.hideLoader()
             if status {
