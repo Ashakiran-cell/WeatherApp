@@ -11,10 +11,6 @@ import SDWebImage
 
 class WeatherViewController: UIViewController {
     
-    var locationManager: CLLocationManager?
-    
-    var weatherViewModel = WeatherViewModel()
-    
     @IBOutlet weak var dewPointLbl: UILabel!
     @IBOutlet weak var visibilityLbl: UILabel!
     @IBOutlet weak var humidityLbl: UILabel!
@@ -27,6 +23,9 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var dateTimeLbl: UILabel!
     @IBOutlet weak var weatherDataViewRef: UIView!
     @IBOutlet weak var tableViewRef: UITableView!
+    
+    var locationManager: CLLocationManager?
+    var weatherViewModel = WeatherViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
