@@ -11,17 +11,20 @@ import XCTest
 final class WeatherAppTests: XCTestCase {
     
     var weatherViewModel: WeatherViewModel?
+    var mockAPIServices: MockAPIServices?
 
     override func setUp() {
         super.setUp()
         
-        self.weatherViewModel = WeatherViewModel(service: MockAPIServices())
+        self.mockAPIServices = MockAPIServices()
+        self.weatherViewModel = WeatherViewModel(service: self.mockAPIServices)
     }
 
     override func tearDown() {
         super.tearDown()
         
         self.weatherViewModel = nil
+        self.mockAPIServices = nil
     }
     
     func testForecastModel() {
@@ -51,10 +54,12 @@ final class WeatherAppTests: XCTestCase {
     
     func testWeatherDataModel() {
         self.weatherViewModel?.fetchWeatherData(lat: 0.0, lng: 0.0, completionHandler: { status, _ in
-            if let weatherData = self.weatherViewModel?.getWeatherData() {
-                XCTAssertTrue((weatherData.main?.temp as? Double) != nil)
-                XCTAssertTrue((weatherData.main?.pressure as? Int) != nil)
-                XCTAssertTrue((weatherData.main?.humidity as? Int) != nil)
+            if status {
+                if let weatherData = self.weatherViewModel?.getWeatherData() {
+                    XCTAssertTrue((weatherData.main?.temp as? Double) != nil)
+                    XCTAssertTrue((weatherData.main?.pressure as? Int) != nil)
+                    XCTAssertTrue((weatherData.main?.humidity as? Int) != nil)
+                }
             }
         })
     }

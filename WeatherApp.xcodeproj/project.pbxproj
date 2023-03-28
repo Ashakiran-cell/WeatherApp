@@ -117,14 +117,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		88838CDC29CEF61300454E95 /* MockJson */ = {
+		88838CDC29CEF61300454E95 /* MockJSON */ = {
 			isa = PBXGroup;
 			children = (
 				88838CE129CEF68F00454E95 /* ForecastModel.json */,
 				88838CDF29CEF68900454E95 /* WeatherDataModel.json */,
 				88838CDD29CEF68300454E95 /* WeatherModel.json */,
 			);
-			path = MockJson;
+			path = MockJSON;
 			sourceTree = "<group>";
 		};
 		88838CE329CEF80D00454E95 /* Frameworks */ = {
@@ -161,7 +161,7 @@
 				8885B70F29CE0862005E00A3 /* AppDelegate.swift */,
 				8885B71129CE0862005E00A3 /* SceneDelegate.swift */,
 				8885B74129CE08C7005E00A3 /* Helper */,
-				88838CDC29CEF61300454E95 /* MockJson */,
+				88838CDC29CEF61300454E95 /* MockJSON */,
 				8885B75529CE0CE5005E00A3 /* Constants */,
 				8885B74029CE08B8005E00A3 /* Extensions */,
 				8885B73F29CE08A7005E00A3 /* Features */,

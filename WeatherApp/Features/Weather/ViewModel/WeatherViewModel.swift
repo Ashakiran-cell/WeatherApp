@@ -31,7 +31,6 @@ class WeatherViewModel {
             let cityName = city.replacingOccurrences(of: " ", with: "%20")
             url = AppURL.geoURL + "\(cityName)&appid=\(AppConstants.appID)"
         }
-        
         self.service?.request(urlString: url, model: [WeatherModel].self, completionHandler: { response in
             switch response {
             case .success(let data):
