@@ -162,6 +162,7 @@
 				8885B71129CE0862005E00A3 /* SceneDelegate.swift */,
 				8885B74129CE08C7005E00A3 /* Helper */,
 				88838CDC29CEF61300454E95 /* MockJson */,
+				8885B75529CE0CE5005E00A3 /* Constants */,
 				8885B74029CE08B8005E00A3 /* Extensions */,
 				8885B73F29CE08A7005E00A3 /* Features */,
 				8885B71529CE0862005E00A3 /* Main.storyboard */,
@@ -192,10 +193,7 @@
 		8885B73F29CE08A7005E00A3 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				8885B74729CE08F6005E00A3 /* Model */,
-				88838CD729CEEE0F00454E95 /* View */,
-				8885B74629CE08EB005E00A3 /* ViewModel */,
-				8885B74829CE0903005E00A3 /* Controller */,
+				88DF04E129D04FD700BF33B2 /* Weather */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -204,7 +202,6 @@
 			isa = PBXGroup;
 			children = (
 				8885B74429CE08E4005E00A3 /* Extensions.swift */,
-				8885B75529CE0CE5005E00A3 /* Constants */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -251,6 +248,17 @@
 				8885B75629CE0CF3005E00A3 /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		88DF04E129D04FD700BF33B2 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				8885B74729CE08F6005E00A3 /* Model */,
+				88838CD729CEEE0F00454E95 /* View */,
+				8885B74629CE08EB005E00A3 /* ViewModel */,
+				8885B74829CE0903005E00A3 /* Controller */,
+			);
+			path = Weather;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -594,7 +602,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -627,7 +636,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

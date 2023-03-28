@@ -89,10 +89,10 @@ class WeatherViewController: UIViewController {
     func configureUI() {
         // MARK: - Weather View
         if let data = self.weatherViewModel.getWeatherData() {
-            if let dateValue = data.dt {
+            if let dateValue = data.dt, let timeZone = data.timezone {
                 let date = Date(timeIntervalSince1970: TimeInterval(dateValue))
-                print(date)
                 let dateFormatter = DateFormatter()
+                dateFormatter.timeZone = TimeZone(secondsFromGMT: timeZone)
                 dateFormatter.dateFormat = "MMM d, h:mm a"
                 self.dateTimeLbl.text = dateFormatter.string(from: date)
             }
